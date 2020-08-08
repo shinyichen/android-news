@@ -14,6 +14,8 @@ import com.shinyichen.androidnews.model.NewsResponse;
 import com.shinyichen.androidnews.network.NetworkAPI;
 import com.shinyichen.androidnews.network.RetrofitClient;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -77,6 +79,14 @@ public class NewsRepository {
     MutableLiveData<Boolean> resultLiveData = new MutableLiveData<>();
     new FavoriteAsyncTask(database, resultLiveData).execute(article);
     return resultLiveData;
+  }
+
+  public LiveData<List<Article>> getAllSavedArticles() {
+    return database.dao().getAllArticles();
+  }
+
+  public void deleteSavedArticle(Article article) {
+    AsyncTask.execute(() -> database.dao().deleteArticles(article));
   }
 
   private static class FavoriteAsyncTask extends AsyncTask<Article, Void, Boolean> {

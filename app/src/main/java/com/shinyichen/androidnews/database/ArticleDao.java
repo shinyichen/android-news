@@ -20,5 +20,5 @@ public interface ArticleDao {
   LiveData<List<Article>> getAllArticles();
 
   @Delete
-  void deleteArticle(Article... articles);
+  void deleteArticles(Article... articles);
 }
