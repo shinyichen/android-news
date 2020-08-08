@@ -92,7 +92,6 @@ public class HomeFragment extends Fragment implements CardStackListener {
   @Override
   public void onCardSwiped(Direction direction) {
     if (direction == Direction.Left) {
-      Log.d("CardStackView", "Unliked " + layoutManager.getTopPosition());
     } else if (direction == Direction.Right) {
       // get the current (top of stack) article (index starts at 1)
       Article article = articles.get(layoutManager.getTopPosition() - 1);

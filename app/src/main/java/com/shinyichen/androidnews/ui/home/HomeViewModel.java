@@ -15,6 +15,8 @@ public class HomeViewModel extends ViewModel {
 
   private final MutableLiveData<String> countryInput = new MutableLiveData<>();
 
+  private final MutableLiveData<Integer> pageSizeInput = new MutableLiveData<>();
+
 
   public HomeViewModel(NewsRepository newsRepository) {
     this.repository = newsRepository;

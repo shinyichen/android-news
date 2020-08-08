@@ -74,7 +74,6 @@ public class SearchFragment extends Fragment {
         getViewLifecycleOwner(),
         newsResponse -> {
           if (newsResponse != null) {
-            Log.d("SearchFragment", newsResponse.toString());
             newsAdapter.setArticles(newsResponse.articles);
           }
         });

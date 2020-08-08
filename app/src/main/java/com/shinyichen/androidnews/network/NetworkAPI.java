@@ -10,7 +10,8 @@ public class NetworkAPI {
   public interface NewsApi {
 
     @GET("top-headlines")
-    Call<NewsResponse> getTopHeadlines(@Query("country") String country);
+    Call<NewsResponse> getTopHeadlines(
+      @Query("country") String country, @Query("pageSize") int pageSize);
 
     @GET("everything")
     Call<NewsResponse> getEverything(

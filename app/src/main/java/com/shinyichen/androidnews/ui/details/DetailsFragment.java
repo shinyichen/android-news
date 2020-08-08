@@ -46,7 +46,6 @@ public class DetailsFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
 
     Article article = DetailsFragmentArgs.fromBundle(getArguments()).getArticle();
-    Log.d("Content", article.content);
     binding.detailsTitleTextView.setText(article.title);
     binding.detailsAuthorTextView.setText(article.author);
     binding.detailsDateTextView.setText(article.publishedAt);

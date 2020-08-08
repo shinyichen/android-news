@@ -34,7 +34,7 @@ public class NewsRepository {
 
   public LiveData<NewsResponse> getTopHeadlines(String country) {
     MutableLiveData<NewsResponse> topHeadlinesLiveData = new MutableLiveData<>();
-    newsApi.getTopHeadlines(country)
+    newsApi.getTopHeadlines(country, 50)
       .enqueue(new Callback<NewsResponse>() {
         @Override
         public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {

@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">AndroidNews</string>
+  <string name="app_name">QuickNews</string>
   <string name="title_home">Home</string>
   <string name="title_save">Save</string>
   <string name="title_search">Search</string>

@@ -8,7 +8,7 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="@dimen/margin_large"
     android:orientation="vertical">
     
     <TextView
@@ -36,14 +36,14 @@
       android:id="@+id/details_description_text_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="12dp"
+      android:layout_marginTop="@dimen/margin_default"
       tools:text="This is a description" />
     
     <ImageView
       android:id="@+id/details_image_view"
       android:layout_width="match_parent"
       android:layout_height="300dp"
-      android:layout_marginTop="12dp"
+      android:layout_marginTop="@dimen/margin_default"
       android:scaleType="centerCrop"
       tools:src="@tools:sample/avatars" />
 
@@ -51,8 +51,8 @@
       android:id="@+id/details_content_text_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="12dp"
-      android:layout_marginBottom="12dp"
+      android:layout_marginTop="@dimen/margin_default"
+      android:layout_marginBottom="@dimen/margin_default"
       tools:text="@tools:sample/lorem/random"/>
     
   </LinearLayout>
